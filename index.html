@@ -21,6 +21,12 @@
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      animation: fadeInBody 1.2s ease-in-out;
+    }
+
+    @keyframes fadeInBody {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .tips-container {
@@ -31,12 +37,12 @@
       border-radius: 14px;
       box-shadow: 0 0 30px rgba(255, 23, 68, 0.4);
       border: 1px solid #2a2a2a;
-      animation: fadeIn 1s ease-in-out;
+      animation: fadeInCard 1.5s ease-in-out;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    @keyframes fadeInCard {
+      0% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 1; transform: scale(1); }
     }
 
     h1 {
@@ -45,6 +51,12 @@
       font-size: 20px;
       margin-bottom: 16px;
       text-shadow: 0 0 6px rgba(255, 23, 68, 0.4);
+      animation: fadeInTitle 1.8s ease-in-out;
+    }
+
+    @keyframes fadeInTitle {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .tip {
@@ -55,6 +67,18 @@
       border-radius: 8px;
       line-height: 1.6;
       font-size: 14px;
+      animation: fadeInTip 2s ease-in-out;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .tip:hover {
+      background-color: #2a2a2a;
+      transform: translateX(5px);
+    }
+
+    @keyframes fadeInTip {
+      0% { opacity: 0; transform: translateX(-20px); }
+      100% { opacity: 1; transform: translateX(0); }
     }
 
     .tip strong {
@@ -78,6 +102,7 @@
       cursor: pointer;
       box-shadow: 0 0 8px rgba(255, 23, 68, 0.3);
       transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      animation: fadeInTip 2.2s ease-in-out;
       text-decoration: none;
     }
 
